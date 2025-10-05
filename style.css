@@ -33,6 +33,7 @@
 .mobile-bottom-menu-inner h4 {
     margin-top: 5px;
     margin-bottom: 0;
+    font-weight: 500;
 	font-family: var( --e-global-typography-text-font-family ), Sans-serif;
 }
 
