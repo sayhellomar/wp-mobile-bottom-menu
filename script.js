@@ -1,18 +1,18 @@
-(function($) {
-	$(document).ready(function() {
-		let position = $(window).scrollTop();
-		
-		$(window).on("scroll", function () {
+document.addEventListener("DOMContentLoaded", function () {
+    let position = window.scrollY;
 
-			let scroll = $(window).scrollTop();
-			if (scroll > position) {
-				$('#mobile-bottom-menu').removeClass('show');
-				$('#mobile-bottom-menu').addClass('hide');
-			} else {
-				$('#mobile-bottom-menu').addClass('show');
-				$('#mobile-bottom-menu').removeClass('hide');
-			}
-			position = scroll;
-		});
-	});
-})(jQuery);
+    window.addEventListener("scroll", function () {
+        let scroll = window.scrollY;
+        const menu = document.getElementById("mobile-bottom-menu");
+
+        if (scroll > position) {
+            menu.classList.remove("show");
+            menu.classList.add("hide");
+        } else {
+            menu.classList.add("show");
+            menu.classList.remove("hide");
+        }
+
+        position = scroll;
+    });
+});
